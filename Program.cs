@@ -1,368 +1,265 @@
-﻿namespace ConditionalStatement
+﻿namespace Loops
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Clear();
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.Clear();
 
-            Console. WriteLine("Choose a Program: \n [1] - Problem: Excellent Grade or Not \n [2] - Problem: Even or Odd \n [3] - Problem: Finding the greater number \n [4] - Problem: Typing a digit in words \n [5] - Problem: Bonus score \n [6] - Problem: Guess the password \n [7] - Mad-Libs");
+			Console. WriteLine("Choose a Program: \n [1] - Problem: Summing up numbers \n [2] - Problem: Min number \n [3] - Problem: Left and right sum \n [4] - Problem: Chinema \n [5] - Problem: Sum of vowels \n [6] - Problem: Sum of consonants \n [7] - Hospital");
             int program = int.Parse(Console.ReadLine());
             Console.Clear();
 
-            if (program == 1)
-            {
-                //! Problem: Excellent Grade or Not
-                Console.Write("Enter your grade: ");
-                float grade = float.Parse(Console.ReadLine());
-                if (grade >= 5.5)
-                {
-                    Console.WriteLine("Excellent!");
-                }
-                else
-                {
-                    Console.WriteLine("Not excellent!");
-                }
-            }
-            else if (program == 2)
-            {
-                //! Problem: Even or Odd
-                Console.Write("Enter a number: ");
-                int number = int.Parse(Console.ReadLine());
-                if (number % 2 == 0)
-                {
-                    Console.WriteLine("Even");
-                }
-                else
-                {
-                    Console.WriteLine("Odd");
-                }
-            }
-            else if (program == 3)
-            {
-                //! Problem: Finding the greater number
-                Console.Write("Enter a number 1: ");
-                int number1 = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter a number 2: ");
-                int number2 = int.Parse(Console.ReadLine());
-                if (number1 > number2)
-                {
-                    Console.WriteLine(number1);
-                }
-                else
-                {
-                    Console.WriteLine(number2);
-                }
-            }
-            else if (program == 4)
-            {
-                //! Problem: Typing a digit in words
-                Console.Write("Enter a digit: ");
-                int digit = int.Parse(Console.ReadLine());
-                if (digit == 0)
-                {
-                    Console.WriteLine("Zero");
-                }
-                else if (digit == 1)
-                {
-                    Console.WriteLine("One");
-                }
-                else if (digit == 2)
-                {
-                    Console.WriteLine("Two");
-                }
-                else if (digit == 3)
-                {
-                    Console.WriteLine("Three");
-                }
-                else if (digit == 4)
-                {
-                    Console.WriteLine("Four");
-                }
-                else if (digit == 5)
-                {
-                    Console.WriteLine("Five");
-                }
-                else if (digit == 6)
-                {
-                    Console.WriteLine("Six");
-                }
-                else if (digit == 7)
-                {
-                    Console.WriteLine("Seven");
-                }
-                else if (digit == 8)
-                {
-                    Console.WriteLine("Eight");
-                }
-                else if (digit == 9)
-                {
-                    Console.WriteLine("Nine");
-                }
-                else
-                {
-                    Console.WriteLine("Number too big");
-                }
-            }
-            else if (program == 5)
-            {
-                //! Problem: Bonus score
-                Console.Write("Enter your score: ");
-                float score = float.Parse(Console.ReadLine());
-                float bonus = 0;
-                if (Math.Abs(score % 2) == 0)
-                {
-                    bonus = bonus + 1;
-                    Console.WriteLine("Score is even, bonus + 1: {0}", bonus);
-                }
-                if (Math.Abs(score % 10) == 5)
-                {
-                    bonus = bonus + 2;
-                    Console.WriteLine("Score end with 5, bonus + 2: {0}", bonus);
-                }
-                if (score > 1000)
-                {
-                    bonus = bonus + (score/100*10);
-                    Console.WriteLine("Score is greater than 1000, bonus + 10%: {0}", bonus);
-                }else if (score > 100)
-                {
-                    bonus = bonus + (score/100*20);
-                    Console.WriteLine("Score is greater than 100, bonus + 20%: {0}", bonus);
-                }else if (score <= 100)
-                {
-                    bonus = bonus + 5;
-                    Console.WriteLine("Score is up to 100 including, bonus + 5: {0}", bonus);
-                }
+			if (program == 1)
+			{//! Problem: Summing up numbers
+			Console.Write("How many numbers do you want to sum up? ");
+			int n = int.Parse(Console.ReadLine());
+			int sum = 0;
+			for (int i = 0; i < n; i++)
+			{
+				int number = int.Parse(Console.ReadLine());
+				sum += number;
+			}
+			Console.WriteLine($"The sum is {sum}");}
 
-                Console.WriteLine("Your bonus score is: {0}", bonus);
-                Console.WriteLine("Your final score is: {0}", score + bonus);
-            }
-            else if (program == 6)
-            {
-                //!Problem: Guess the password
-                Console.Write("Enter your guess: ");
-                string guess = Console.ReadLine();
-                if (guess == "s3cr3t!P@ssw0rd")
-                {
-                    Console.WriteLine("Welcome");
-                }
-                else
-                {
-                    Console.WriteLine("Wrong password!");
-                }
-            }
-            else if (program == 7)
-            {
-                //! Mad-Libs
-                Console.WriteLine("Choose a story: \n [1] - Be Kind \n [2] - Runaway Bride Proposal Ad \n [3] - Sick Note \n [4] - Love Letter");
-                int story = int.Parse(Console.ReadLine());
+			if (program == 2)
+			{//! Problem: Min number
+			Console.Write("How many numbers do you want to compare? ");
+			int n = int.Parse(Console.ReadLine());
+			int min = int.MaxValue;
+			for (int i = 0; i < n; i++)
+			{
+				int number = int.Parse(Console.ReadLine());
+				if (number < min)
+				{
+					min = number;
+				}
+			}
+			Console.WriteLine($"The min number is {min}");}
 
-                if (story == 1)
-                {
-                    Console.Write("Noun: ");
-                    string line1 = Console.ReadLine();
-                    Console.Write("Noun (plural): ");
-                    string line2 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line3 = Console.ReadLine();
-                    Console.Write("Place: ");
-                    string line4 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line5 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line6 = Console.ReadLine();
+			if (program == 3)
+			{//! Problem: Left and right sum
+			Console.Write("How many numbers do you want to sum and compare? ");
+			int n = int.Parse(Console.ReadLine());
+			int leftSum = 0;
+			int rightSum = 0;
+			Console.WriteLine("Left side:");
+			for (int i = 0; i < n; i++)
+			{
+				int number = int.Parse(Console.ReadLine());
+				leftSum += number;
+			}
+			Console.WriteLine("Right side:");
+			for (int i = 0; i < n; i++)
+			{
+				int number = int.Parse(Console.ReadLine());
+				rightSum += number;
+			}
+			if (leftSum == rightSum)
+			{
+				Console.WriteLine($"Yes, sum = {leftSum}");
+			}
+			else
+			{
+				Console.WriteLine($"No, diff = {Math.Abs(leftSum - rightSum)}");
+			}}
 
-                    Console.Clear();
+			if (program == 4)
+			{//! Problem: Chinema
+			string[ , ] typesOfScreening = {{"Premiere", "12"},{"Normal", "7,50"},{"Discount", "5"} };
+			Console.Write("Types of screenings: ");
+			for (int i = 0; i < typesOfScreening.Length/2; i++)
+			{
+				Console.Write($"\n {typesOfScreening[i, 0]} ");
+			}
+			Console.Write("\n Choose a type of screening: ");
+			string type = Console.ReadLine();
+			Console.Write("How many rows are there? ");
+			int rows = int.Parse(Console.ReadLine());
+			Console.Write("How many columns are there? ");
+			int columns = int.Parse(Console.ReadLine());
+			int seats = rows * columns;
+			for (int i = 0; i < typesOfScreening.Length/2; i++)
+			{
+				if (typesOfScreening[i, 0] == type)
+				{
+					double total = seats * double.Parse(typesOfScreening[i, 1]);
+					Console.WriteLine($"The price of the ticket is {typesOfScreening[i, 1]} EUR");
+					Console.WriteLine($"The income from the screening is " + total.ToString("F") + " EUR");
+				}
+			}}
 
-                    Console.Write("Mashing Together the Words[::::::]:0%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█:::::]:16%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██::::]:33%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[███:::]:49%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[████::]:66%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█████:]:83%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██████]:100%");
-                    System.Threading.Thread.Sleep(1000);
+			if (program == 5)
+			{//! Problem: Sum of vowels
+			Console.Write("Enter a word: ");
+			string word = Console.ReadLine();
+			int sum = 0;
+			string vowels = "";
+			for (int i = 0; i < word.Length; i++)
+			{
+				switch (word[i])
+				{
+					case 'a':
+						sum += 1;
+						vowels += "a";
+						break;
+					case 'e':
+						sum += 2;
+						vowels += "e";
+						break;
+					case 'i':
+						sum += 3;
+						vowels += "i";
+						break;
+					case 'o':
+						sum += 4;
+						vowels += "o";
+						break;
+					case 'u':
+						sum += 5;
+						vowels += "u";
+						break;
+					case 'y':
+						sum += 6;
+						vowels += "y";
+						break;
+					
+				}
+			}
+			Console.WriteLine($"The sum of the vowels is {sum}");
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.Write("(");
+			Console.ForegroundColor = ConsoleColor.Blue;
+			for (int i = 0; i < vowels.Length; i++)
+			{
+				Console.Write($"{vowels[i]}");
+				if (i != vowels.Length - 1)
+				{
+					Console.Write(" + ");
+				}
+				else
+				{
+					Console.ForegroundColor = ConsoleColor.Green;
+					Console.Write(" = ");
+				}
+			}
+			Console.ForegroundColor = ConsoleColor.Red;
+			for (int i = 0; i < vowels.Length; i++)
+			{
+				if (vowels[i] == 'a')
+				{
+					Console.Write("1");
+				}
+				else if (vowels[i] == 'e')
+				{
+					Console.Write("2");
+				}
+				else if (vowels[i] == 'i')
+				{
+					Console.Write("3");
+				}
+				else if (vowels[i] == 'o')
+				{
+					Console.Write("4");
+				}
+				else if (vowels[i] == 'u')
+				{
+					Console.Write("5");
+				}
+				else if (vowels[i] == 'y')
+				{
+					Console.Write("6");
+				}
 
-                    Console.Clear();
+				if (i != vowels.Length - 1)
+				{
+					Console.Write(" + ");
+				}
+			}
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.Write($" = {sum})");
+			Console.ResetColor();}
 
-                    Console.Write("\n Be kind to your {0}-footed {1} \n For a duck may be somebody`s {2}, \n Be kind to your {1} in {3} \n Where the weather is always {4}. \n \n You may think that this is the {5}, \n Well it is.", line1, line2, line3, line4, line5, line6);
-                    
-                }
-                else if (story == 2)
-                {
-                    Console.Write("Adjective: ");
-                    string line1 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line2 = Console.ReadLine();
-                    Console.Write("Number: ");
-                    string line3 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line4 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line5 = Console.ReadLine();
-                    Console.Write("Verb: ");
-                    string line6 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line7 = Console.ReadLine();
-                    Console.Write("Body part: ");
-                    string line8 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line9 = Console.ReadLine();
+			if (program == 6)
+			{//! Problem: Sum of consonants
+			Console.Write("Enter a word: ");
+			string word = Console.ReadLine();
+			int sum = 0;
+			string consonants = "";
+			for (int i = 0; i < word.Length; i++)
+			{
+				if (word[i] != 'a' && word[i] != 'e' && word[i] != 'i' && word[i] != 'o' && word[i] != 'u' && word[i] != 'y')
+				{
+					sum += word[i] - 'a';
+					consonants += word[i];
+				}
+			}
+			Console.WriteLine($"The sum of the consonants is {sum}");
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.Write("(");
+			Console.ForegroundColor = ConsoleColor.Blue;
+			for (int i = 0; i < consonants.Length; i++)
+			{
+				Console.Write($"{consonants[i]}");
+				if (i != consonants.Length - 1)
+				{
+					Console.Write(" + ");
+				}
+				else
+				{
+					Console.Write(" = ");
+				}
+			}
+			Console.ForegroundColor = ConsoleColor.Red;
+			for (int i = 0; i < consonants.Length; i++)
+			{
+				Console.Write(consonants[i] - 'a');
+				if (i != consonants.Length - 1)
+				{
+					Console.Write(" + ");
+				}
+				else
+				{
+					Console.Write(" = ");
+				}
+			}
+			Console.ForegroundColor = ConsoleColor.Green;
+			Console.Write($" = {sum})");
+			Console.ResetColor();}
 
-                    Console.Clear();
-
-                    Console.Write("Mashing Together the Words[::::::]:0%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█:::::]:16%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██::::]:33%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[███:::]:49%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[████::]:66%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█████:]:83%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██████]:100%");
-                    System.Threading.Thread.Sleep(1000);
-
-                    Console.Clear();
-
-                    Console.Write("\n Look, I guarantee there`ll be {0} times. \n I guarantee that at some {1}, {2} or both of us is gonna want to get out of this {3}. \n But I also guarantee that if I don`t ask you to be {4}, I`ll {5} it for the rest of my {6}, because I know, in my {7}, you`re the {8} one for me.", line1, line2, line3, line4, line5, line6, line7, line8, line9);
-                }
-                else if (story == 3)
-                {
-                    Console.Write("Silly word: ");
-                    string line1 = Console.ReadLine();
-                    Console.Write("Last name: ");
-                    string line2 = Console.ReadLine();
-                    Console.Write("Illness: ");
-                    string line3 = Console.ReadLine();
-                    Console.Write("Noun (plural): ");
-                    string line4 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line5 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line6 = Console.ReadLine();
-                    Console.Write("Silly word: ");
-                    string line7 = Console.ReadLine();
-                    Console.Write("Place: ");
-                    string line8 = Console.ReadLine();
-                    Console.Write("Number: ");
-                    string line9 = Console.ReadLine();
-                    Console.Write("Adjective: ");
-                    string line10 = Console.ReadLine();
-
-                    Console.Clear();
-
-                    Console.Write("Mashing Together the Words[::::::]:0%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█:::::]:16%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██::::]:33%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[███:::]:49%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[████::]:66%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█████:]:83%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██████]:100%");
-                    System.Threading.Thread.Sleep(1000);
-
-                    Console.Clear();
-
-                    Console.Write("\n Dear School Nurse: \n {0} {1} will not be attending school today. He/she has come down with a case of {2} and has horrible {3} and a/an {4} fever. We have made an appointment with the {5} Dr. {6}, who studied for many years in {7} and has {8} degrees in pediatrics. He will send you all the information you need. Thank you! \n Sincerely \n Mrs. {9}.", line1, line2, line3, line4, line5, line6, line7, line8, line9, line10);
-                }
-                else if (story == 4)
-                {
-                    Console.Write("Name of person in room: ");
-                    string line1 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line2 = Console.ReadLine();
-                    Console.Write("Superlative (ending in 'est'): ");
-                    string line3 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line4 = Console.ReadLine();
-                    Console.Write("Body part: ");
-                    string line5 = Console.ReadLine();
-                    Console.Write("Verb (ending in 'ing'): ");
-                    string line6 = Console.ReadLine();
-                    Console.Write("Noun: ");
-                    string line7 = Console.ReadLine();
-                    Console.Write("Verb: ");
-                    string line8 = Console.ReadLine();
-                    Console.Write("Event: ");
-                    string line9 = Console.ReadLine();
-                    Console.Write("Day if the week: ");
-                    string line10 = Console.ReadLine();
-                    Console.Write("Verb: ");
-                    string line11 = Console.ReadLine();
-                    Console.Write("Verb: ");
-                    string line12 = Console.ReadLine();
-                    Console.Write("Place: ");
-                    string line13 = Console.ReadLine();
-                    Console.Write("Time span: ");
-                    string line14 = Console.ReadLine();
-                    Console.Write("Verb: ");
-                    string line15 = Console.ReadLine();
-                    Console.Write("Adverb: ");
-                    string line16 = Console.ReadLine();
-                    Console.Write("Name of person in room: ");
-                    string line17 = Console.ReadLine();
-
-                    Console.Clear();
-
-                    Console.Write("Mashing Together the Words[::::::]:0%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█:::::]:16%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██::::]:33%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[███:::]:49%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[████::]:66%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[█████:]:83%");
-                    System.Threading.Thread.Sleep(1000);
-                    Console.Clear();
-                    Console.Write("Mashing Together the Words[██████]:100%");
-                    System.Threading.Thread.Sleep(1000);
-
-                    Console.Clear();
-
-                    Console.Write("\n Dear {0}, \n \n It has come to my {1} that you are the {2} girl/boy in the {3}. My {4} starts {5} a {6} every time you speak. I would like to {7} if you want to go to the {8} with me next {9}. If you {12} please {11} me at the {12} in {13}. I {14} you and everything about you. \n \n {15}, \n {16}", line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11, line12, line13, line14, line15, line16, line17);
-                }
-            }
-        }
-    }
+			if (program == 7)
+			{//! Problem: Hospital
+			int docters = 7;
+			int patients = 0;
+			int treatedPatients = 0;
+			int untreatedPatients = 0;
+			Console.Write("Enter the period of time in days: ");
+			int days = int.Parse(Console.ReadLine());
+			for (int i = 1; i <= days; i++)
+			{
+				Console.WriteLine($"Day{i}: ");
+				// Checks if there are more untreated patients than doctors if so, another doctor is added
+				if (i % 3 == 0 && treatedPatients < untreatedPatients)
+				{
+					Console.WriteLine("There are more untreated patients than treated patients, another doctor is added");
+					docters++;
+					Console.WriteLine($"There are now {docters} doctors");
+				}
+				Console.Write($"Enter the number of patients on day {i}: ");
+				patients = int.Parse(Console.ReadLine());
+				// Calculates the number of treated patients and the number of untreated patients
+				if (patients > docters)
+				{
+					treatedPatients += docters;
+					untreatedPatients += patients - docters;
+				}
+				else
+				{
+					treatedPatients += patients;
+				}
+			}
+			Console.WriteLine($"Treated patients: {treatedPatients}");
+			Console.WriteLine($"Untreated patients: {untreatedPatients}");}
+		}
+	}
 }

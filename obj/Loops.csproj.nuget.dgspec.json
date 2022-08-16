@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\ConditionalStatements.csproj": {}
+    "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\ConditionalStatements.csproj": {
+    "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\ConditionalStatements.csproj",
-        "projectName": "ConditionalStatements",
-        "projectPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\ConditionalStatements.csproj",
+        "projectUniqueName": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj",
+        "projectName": "Loops",
+        "projectPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj",
         "packagesPath": "C:\\Users\\luka1651\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\obj\\",
         "projectStyle": "PackageReference",
