@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Loops/1.0.0": {
+      "NestedLoops/1.0.0": {
         "runtime": {
-          "Loops.dll": {}
+          "NestedLoops.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Loops/1.0.0": {
+    "NestedLoops/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

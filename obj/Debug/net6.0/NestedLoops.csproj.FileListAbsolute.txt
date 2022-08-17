@@ -1,0 +1,15 @@
+C:\Users\luka1651\Documents\C#\ConditionalStatements\bin\Debug\net6.0\NestedLoops.exe
+C:\Users\luka1651\Documents\C#\ConditionalStatements\bin\Debug\net6.0\NestedLoops.deps.json
+C:\Users\luka1651\Documents\C#\ConditionalStatements\bin\Debug\net6.0\NestedLoops.runtimeconfig.json
+C:\Users\luka1651\Documents\C#\ConditionalStatements\bin\Debug\net6.0\NestedLoops.dll
+C:\Users\luka1651\Documents\C#\ConditionalStatements\bin\Debug\net6.0\NestedLoops.pdb
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.csproj.AssemblyReference.cache
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.AssemblyInfoInputs.cache
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.AssemblyInfo.cs
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.csproj.CoreCompileInputs.cache
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.dll
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\refint\NestedLoops.dll
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.pdb
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\NestedLoops.genruntimeconfig.cache
+C:\Users\luka1651\Documents\C#\ConditionalStatements\obj\Debug\net6.0\ref\NestedLoops.dll

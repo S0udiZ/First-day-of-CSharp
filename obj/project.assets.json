@@ -8,17 +8,21 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\luka1651\\.nuget\\packages\\": {}
+    "C:\\Users\\luka1651\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj",
-      "projectName": "Loops",
-      "projectPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\Loops.csproj",
+      "projectUniqueName": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\NestedLoops.csproj",
+      "projectName": "NestedLoops",
+      "projectPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\NestedLoops.csproj",
       "packagesPath": "C:\\Users\\luka1651\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\luka1651\\Documents\\C#\\ConditionalStatements\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\luka1651\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
